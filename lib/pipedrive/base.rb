@@ -105,7 +105,9 @@ module Pipedrive
           res['data'] = opts.merge res['data']
           new(res)
         else
-          bad_response(res,opts)
+          puts 'failed to create contact' 
+          puts res
+           #bad_response(res,opts)
         end
       end
       

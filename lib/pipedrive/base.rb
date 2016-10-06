@@ -100,6 +100,7 @@ module Pipedrive
 
       def create( opts = {} )
         res = post resource_path, :body => opts
+        puts res
         if res.success?
           res['data'] = opts.merge res['data']
           new(res)
